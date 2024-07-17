@@ -1,5 +1,12 @@
 # Atividade 3
 
+## Adicionar nova coluna
+
+Adicione uma nova coluna chamada nome na sua tabela usuário.
+
+## Treinando comandos de Select
+
+
 Implemente na classe UsuarioDAO cada 1 dos comandos de select abaixo:
 
 1. **Selecionar todas as colunas de todas as pessoas com idade entre 25 e 35 anos:**
