@@ -208,6 +208,10 @@ Em resumo, **EntityManagerFactory** é responsável por criar e gerenciar **Enti
 6. Qual diferença entre os comandos de create table gerado?
 7. Salve 1 usuário com o tipo COMUM 
 
+## Implementar o padrão do projeto DAO
+
+## Implementar o Padrão de Projeto Singleton 
+1. Implementar o padrão de projeto Singleton para obter a instâncias do **EntityManagerFactory**
 
 
 
