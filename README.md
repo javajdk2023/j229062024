@@ -165,21 +165,20 @@ O JPA (Java Persistence API) é uma especificação que fornece uma maneira padr
 
 1. **Operações CRUD**: O **EntityManager** fornece métodos para realizar operações básicas de CRUD (Create, Read, Update, Delete) em entidades.
 
-   ```java
-  EntityManagerFactory factory = Persistence.createEntityManagerFactory("FUCTURA-PU");
+```
+EntityManagerFactory factory = Persistence.createEntityManagerFactory("FUCTURA-PU");
 
-		EntityManager manager =  factory.createEntityManager();
-		
-		Usuario usuario = new Usuario();
-		usuario.setNome("Fuctura");
-		usuario.setIdade(90);
-		usuario.setCpf("123456789");
-		
-		
-		manager.getTransaction().begin();
-		manager.persist(usuario); //insert
-		manager.getTransaction().commit();
-   ```
+EntityManager manager =  factory.createEntityManager();
+
+Usuario usuario = new Usuario();
+usuario.setNome("Fuctura");
+usuario.setIdade(90);
+usuario.setCpf("123456789");
+
+manager.getTransaction().begin();
+manager.persist(usuario); //insert
+manager.getTransaction().commit();
+```
 
 2. **Gerenciamento de Transações**: O **EntityManager** é responsável por gerenciar o contexto de persistência dentro de uma transação. Ele deve ser utilizado dentro do escopo de uma transação, geralmente gerenciada por um container ou por transações manuais.
 
