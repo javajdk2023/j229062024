@@ -53,6 +53,59 @@ public class UsuarioDAO {
 		}
 
 		return usuarios;
+	} // chave do consultar todos
+
+	//
+	public List<Usuario> findIdadeBetween(Connection conn, int min, int max) throws SQLException {
+		String comandoSQL = "select * from usuario where idade between ? and ?";
+
+		PreparedStatement pstm = conn.prepareStatement(comandoSQL); // modularizar
+
+		pstm.setInt(1, min);
+		pstm.setInt(2, max);
+
+		ResultSet resultadoConsulta = pstm.executeQuery(); // modularizar
+
+		List<Usuario> usuarios = mapper(resultadoConsulta);
+		
+		return usuarios;
+	}
+	
+	public List<Usuario> findNomeLike(Connection conn, String like) throws SQLException{
+		String coringa = like + "%";
+		
+		String comandoSQL = "select * from usuario where nome like ?";
+
+		PreparedStatement pstm = conn.prepareStatement(comandoSQL); // modularizar
+
+		pstm.setString(1, coringa);
+
+		ResultSet resultadoConsulta = pstm.executeQuery(); // modularizar
+
+		List<Usuario> usuarios = mapper(resultadoConsulta);
+		
+		return usuarios;
+	}
+	
+	private List<Usuario> mapper(ResultSet resultadoConsulta) throws SQLException {
+
+		List<Usuario> usuarios = new ArrayList<Usuario>();
+
+		while (resultadoConsulta.next()) {
+			String cpf = resultadoConsulta.getString("cpf");
+			int idade = resultadoConsulta.getInt("idade");
+			int codigo = resultadoConsulta.getInt("codigo");
+
+			Usuario u = new Usuario();
+			u.setCodigo(codigo);
+			u.setCpf(cpf);
+			u.setIdade(idade);
+
+			usuarios.add(u);
+		}
+
+		return usuarios;
+
 	}
 
 }
