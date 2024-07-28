@@ -1,34 +1,23 @@
-# Projeto  - Sistema Gerenciador de Veículos
-
-
-## Orientações
-
-- Cada integrante da dupla deve fazer o seu projeto.
-- As duplas podem compartilhar códigos entre si.
-- As duplas devem ser reunir para discutir a solução.
-- No final do módulo a dupla entregará 1 único projeto.
-
-### Pontução
-
-- Menu Completo (5 pontos)
-- Estrutura de Pacotes (1 Ponto)
-- Repository Pattern (1 Ponto)
-- Invocar API de CEP (1 Ponto)
-- Disponibilizar no Github (1 Ponto) 
-- Gerar Relatório de Vendas (1 Ponto)
-
-### Entrega
-
-- O projeto final deve ser entregue versionado no Github com o **README.md** atualizado.
-
-
 ## Criação do Projeto
+
+### Digite ctrl + n
+
+![image](https://github.com/user-attachments/assets/fe4262b2-08c0-4b81-af3f-d96b7bcd6bdb)
+
+### Digite e escolha o projeto Maven
+
+![image](https://github.com/user-attachments/assets/faa657d0-9d22-4505-9b72-4b7290719491)
+
+### Criar um projeto Simples
+
+![image](https://github.com/user-attachments/assets/ead8b8f0-6549-46c4-ac23-a476b6a253ac)
 
 Crie um projeto utilizando o Maven com as seguintes configurações:
 
 * GropID: **br.com.fuctura**
-* ArtifactID: **sistemaGerenciadorDeVeiculosProjeto**
+* ArtifactID: **sistemaGerenciadorDeVeiculosProjetoJPAAluno**
 
+![image](https://github.com/user-attachments/assets/1fc626a3-c298-4703-893f-a5789daf53de)
 
 ### Configure a versão do Java para 17
 
@@ -66,129 +55,143 @@ Confirmar se a versão do Java foi atualizada para 17
 Adicione as seguintes dependências no seu arquivo **pom.xml**:
 
 * https://mvnrepository.com/artifact/org.postgresql/postgresql/42.7.3
-* [https://mvnrepository.com/artifact/faker/faker/0.3.2](https://mvnrepository.com/artifact/com.github.javafaker/javafaker/1.0.2)
-* https://mvnrepository.com/artifact/com.google.code.gson/gson/2.10.1
-
-# Modelagem ER
-
-Crie no seu projeto Java as seguintes entidades com os seus respectivos atributos:
-
-![image](https://github.com/javajdk2023/j05032024/assets/130251409/d1c05959-7575-4bc7-b428-e8c23c0ddecc)
-
-As entidades devem estar no pacote: **br.com.fuctura.entidade**
-
-## Testar o Modelo ER
-
-Para cada entidade crie 1 tabela no Excel com 3 dados de exemplo. Valide se as relações estão funcionando conforme modelado.
-
-Alternativa ao Excel: https://ethercalc.net/zncoemb4wr80
-
-# Inferface com Usuário
-
-Você deve criar um menu que permita o usuário efetuar as seguintes operações:
-
-* Opção 1 - Frente de Loja.
-* Opção 2 - Manuteção no Cadastro.
-* Opção 3 - Sair.
-
-## Frente de Loja
-
-O objetivo da frente de Loja é focar nas consultas e pequenas manutações no cadastro.
-
-Opções diponíveis na frente de loja:
-
-* Opção 1 - Gerenciar Veículo
-  - Opção 1 - Consultar Veículo por Placa
-  - Opção 2 - Voltar para o menu superior.
-* Opção 2 - Gerenciar Loja
-  - Opção 1 - Listar todas as Lojas
-  - Opção 2 - Voltar para o menu superior.
-* Opção 3 - Gerenciar Vendedor
-  - Opção 1 - Consultar Vendedor por Nome
-  - Opção 2 - Voltar para o menu superior.
-* Opção  4 - Gerenciar Cliente
-  - Opção 1 - Cadastrar Cliente
-  - Opção 2 - Consultar Cliente por CPF
-  - Opção 3 - Voltar para o menu superior.
-* Opção 5 - Gerenciar Venda
-  - Opção 1 - Cadastrar Venda.
-  - Opção 2 - Voltar para o menu superior.
-* Opção 6 - Voltar para o menu superior.
-
-## Manutenção no Cadastro
-
-O objetivo da manutenção é alterar os dados salvos no banco de dados da aplicação
-
-* Opção 1 - Gerenciar Veículo
-  - Opção 1 - Cadastrar veículo
-  - Opção 2 - Excluir veículo
-  - Opção 3 - Alterar dados do veículo
-  - Opção 4 - Voltar para o menu superior.
-* Opção 2 - Gerenciar Loja
-  - Opção 1 - Cadastrar Loja
-  - Opção 2 - Excluir Loja
-  - Opção 3 - Alterar dados da Loja
-  - Opção 4 - Voltar para o menu superior.
-* Opção 3 - Gerenciar Vendedor
-  - Opção 1 - Cadastrar Vendedor
-  - Opção 2 - Excluir Vendedor
-  - Opção 3 - Alterar dados do Vendedor
-  - Opção 4 - Voltar para o menu superior.
-* Opção  4 - Gerenciar Cliente
-  - Opção 1 - Cadastrar Cliente
-  - Opção 2 - Excluir Cliente
-  - Opção 3 - Alterar dados do Cliente
-  - Opção 4 - Voltar para o menu superior.
-* Opção 5 - Cadastrar Venda
-  - Opção 1 - Excluir Venda
-  - Opção 2 - Voltar para o menu superior.
-* Opção 6 - Voltar para o menu superior.
-
-## Abrir Editor SQL
-
-para digitarmos os comandos abaixo, vamos precisar do DBEaver instalar e configurado. Siga o passo a passo: https://github.com/javajdk2023/j05032024/blob/testar-conexao/README.md
-
-## DDL - Criando Entidades com SQL
-
-### Exemplo
-
-Vamos criar uma tabela utilizando o comando **create table** que automaticamente gera um código sequencial (1, 2, 3, 4,...) de usuário para nós. 
-
-Além disso, vamos garantir que não é possível repetir o código.
-
 ```
-create table usuario (
-codigo serial,
-cpf varchar(13),
-idade int,
-PRIMARY KEY(codigo)
-);
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.3</version>
+</dependency>
 ```
 
-Abaixo segue um de-para com os tipos de dados em Java com os tipos de dados aceitos pelo Postgres.
-
-| Java  | Postgres |
-| ------------- | ------------- |
-| int  | int  |
-| String  | varchar(N)  |
-| double  | float  |
-
-## DML - Inserindo Dados com SQL
-
-### Exemplo
-
-Podemos inserir dados utilizando o comando **insert**. No exemplo abaixo estamos cadastrando um usuário.
-
+* https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core/6.5.2.Final
 ```
-insert into usuario (cpf, idade) values ('123', 10);
+<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate.orm</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>6.5.2.Final</version>
+</dependency>
 ```
 
-## DML - Consultando Dados com SQL
+### Atualizar o Projeto (repita o passo de atualização acima)
 
-### Exemplo
+### Visualizar as Dependências adicionadas no Projeto
 
-Podemos utilizar o comando **select** para consultar os dados de uma tabela. Por exemplo:
+
+![image](https://github.com/user-attachments/assets/489fc03d-c3e8-4a53-ad33-70d336913983)
+
+
+### Versão final do POM.xml
 
 ```
-select * from usuario u;
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.fuctura</groupId>
+	<artifactId>SistemaGerenciadorDeVeiculoJPAAluno</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.5.2.Final</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
 ```
+
+
+# JPA (Java Persistence API)
+
+O JPA (Java Persistence API) é uma especificação que fornece uma maneira padronizada de lidar com persistência de dados em aplicações Java. Ele utiliza anotações para mapear classes Java para tabelas em um banco de dados relacional. Aqui estão algumas das principais anotações do JPA:
+
+1. **@Entity**: Marca uma classe como uma entidade JPA que deve ser mapeada para uma tabela no banco de dados.
+
+2. **@Table**: Especifica o nome da tabela no banco de dados com a qual a entidade será mapeada. Se não for especificado, o nome da tabela será o mesmo da classe.
+
+3. **@Id**: Marca um campo como o identificador único da entidade. É equivalente à chave primária na tabela do banco de dados.
+
+4. **@GeneratedValue**: Define a estratégia de geração do valor da chave primária. Pode usar estratégias como `AUTO`, `IDENTITY`, `SEQUENCE` ou `TABLE`.
+
+5. **@Column**: Mapeia um campo de uma entidade para uma coluna na tabela do banco de dados. Permite definir propriedades como nome da coluna, tipo, comprimento e se ela pode ser nula.
+
+
+### EntityManagerFactory
+
+**EntityManagerFactory** é um componente central no contexto de JPA que é responsável pela criação e gerenciamento de instâncias de **EntityManager**. Suas principais responsabilidades e características são:
+
+1. **Criação de EntityManagers**: O **EntityManagerFactory** cria instâncias de **EntityManager**, que são usadas para interagir com o banco de dados.
+
+2. **Gerenciamento de Recursos**: Ele gerencia os recursos necessários para a persistência, como a conexão com o banco de dados e o contexto de persistência.
+
+3. **Escopo de Vida**: O **EntityManagerFactory** é um objeto caro em termos de recursos, portanto, deve ser criado uma vez e reutilizado ao longo da aplicação. Normalmente, ele é criado na inicialização da aplicação e destruído na sua finalização.
+
+4. **Configuração**: Ele é configurado usando um arquivo de configuração chamado `persistence.xml`, que define a unidade de persistência, propriedades de conexão, e outras configurações necessárias.
+
+5. **Uso**: O método `createEntityManagerFactory` da classe `Persistence` é usado para criar uma instância de **EntityManagerFactory**.
+
+   ```java
+   EntityManagerFactory emf = Persistence.createEntityManagerFactory("FUCTURA-PU");
+   ```
+
+6. **Destruição**: Deve ser fechado quando não for mais necessário, para liberar os recursos associados.
+
+   ```java
+   emf.close();
+   ```
+
+### EntityManager
+
+**EntityManager** é a interface principal usada para interagir com o contexto de persistência. Suas principais responsabilidades e características são:
+
+1. **Operações CRUD**: O **EntityManager** fornece métodos para realizar operações básicas de CRUD (Create, Read, Update, Delete) em entidades.
+
+   ```java
+  EntityManagerFactory factory = Persistence.createEntityManagerFactory("FUCTURA-PU");
+
+		EntityManager manager =  factory.createEntityManager();
+		
+		Usuario usuario = new Usuario();
+		usuario.setNome("Fuctura");
+		usuario.setIdade(90);
+		usuario.setCpf("123456789");
+		
+		
+		manager.getTransaction().begin();
+		manager.persist(usuario); //insert
+		manager.getTransaction().commit();
+   ```
+
+2. **Gerenciamento de Transações**: O **EntityManager** é responsável por gerenciar o contexto de persistência dentro de uma transação. Ele deve ser utilizado dentro do escopo de uma transação, geralmente gerenciada por um container ou por transações manuais.
+
+3. **Escopo de Vida**: O **EntityManager** é um objeto leve e de curto prazo. É criado e destruído frequentemente, normalmente para cada transação ou operação específica. Deve ser fechado após o uso.
+
+   ```java
+   em.close();
+   ```
+
+4. **Contexto de Persistência**: Ele fornece um contexto de persistência que gerencia o ciclo de vida das entidades, a sincronização com o banco de dados e o cache de primeiro nível (no nível da transação).
+
+
+6. **Merge e Remove**: O método `merge` é usado para atualizar entidades, e `remove` para deletar entidades. O **EntityManager** também fornece métodos para verificar o estado da entidade e o gerenciamento do ciclo de vida da mesma.
+
+Em resumo, **EntityManagerFactory** é responsável por criar e gerenciar **EntityManagers** e deve ser usado ao longo da vida da aplicação, enquanto o **EntityManager** é usado para interagir com a base de dados e deve ser criado e destruído conforme necessário, geralmente no escopo de uma transação.
