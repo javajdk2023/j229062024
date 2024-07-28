@@ -211,7 +211,7 @@ Em resumo, **EntityManagerFactory** é responsável por criar e gerenciar **Enti
 ## Implementar o padrão do projeto DAO
 
 ## Implementar o Padrão de Projeto Singleton 
-1. Criar a classe JPAUtils e implementar o padrão de projeto Singleton para obter a instâncias do **EntityManagerFactory**
+1. Criar a classe JPAUtils (br.com.fuctura.utils) e implementar o padrão de projeto Singleton para obter a instâncias do **EntityManagerFactory**
 
 
 
