@@ -191,6 +191,23 @@ manager.getTransaction().commit();
 4. **Contexto de Persistência**: Ele fornece um contexto de persistência que gerencia o ciclo de vida das entidades, a sincronização com o banco de dados e o cache de primeiro nível (no nível da transação).
 
 
-6. **Merge e Remove**: O método `merge` é usado para atualizar entidades, e `remove` para deletar entidades. O **EntityManager** também fornece métodos para verificar o estado da entidade e o gerenciamento do ciclo de vida da mesma.
+5. **Merge e Remove**: O método `merge` é usado para atualizar entidades, e `remove` para deletar entidades. O **EntityManager** também fornece métodos para verificar o estado da entidade e o gerenciamento do ciclo de vida da mesma.
 
 Em resumo, **EntityManagerFactory** é responsável por criar e gerenciar **EntityManagers** e deve ser usado ao longo da vida da aplicação, enquanto o **EntityManager** é usado para interagir com a base de dados e deve ser criado e destruído conforme necessário, geralmente no escopo de uma transação.
+
+
+# Atividade
+
+## Utilizar o **@Enumerated**
+
+1. Crie um Enum java com o nome TipoUsuarioEnum com 2 opções: COMUM e ADMINISTRADOR
+2. Adicione o enum TipoUsuarioEnum como atributo na sua classe.
+3. Adicione a anotação **@Enumerated** no novo atributo.
+4. Adicione o parâmetro no enum: EnumType.ORDINAL execute o código
+5. Adicione o parâmetro no enum: EnumType.STRING execute o código
+6. Qual diferença entre os comandos de create table gerado?
+7. Salve 1 usuário com o tipo COMUM 
+
+
+
+
