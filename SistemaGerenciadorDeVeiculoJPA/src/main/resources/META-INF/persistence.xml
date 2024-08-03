@@ -10,28 +10,36 @@
 			<property name="jakarta.persistence.jdbc.driver"
 				value="org.postgresql.Driver" />
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:postgresql://localhost:5432/postgres" /> <!-- ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
-			<property name="jakarta.persistence.jdbc.user" value="postgres" /> <!-- ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
-			<property name="jakarta.persistence.jdbc.password" value="123" /> <!-- ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
+				value="jdbc:postgresql://localhost:5432/postgres" /> <!-- ALTERE
+			DE ACORDO COM A SUA CONFIGURACAO -->
+			<property name="jakarta.persistence.jdbc.user" value="postgres" /> <!--
+			ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
+			<property name="jakarta.persistence.jdbc.password" value="123" /> <!--
+			ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
 			<!-- Configurações específicas do Hibernate -->
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.connection.pool_size" value="10" />
-			
+
 		</properties>
 	</persistence-unit>
+
+
 	<persistence-unit name="MYSQL-PU"> <!-- COPIAR E COLAR NA CLASSE JAVA -->
 		<properties>
 			<!-- Propriedades JDBC -->
 			<property name="jakarta.persistence.jdbc.driver"
 				value="org.postgresql.Driver" />
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:postgresql://localhost:5432/postgres" /> <!-- ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
-			<property name="jakarta.persistence.jdbc.user" value="postgres" /> <!-- ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
-			<property name="jakarta.persistence.jdbc.password" value="123" /> <!-- ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
+				value="jdbc:postgresql://localhost:5432/postgres" /> <!-- ALTERE
+			DE ACORDO COM A SUA CONFIGURACAO -->
+			<property name="jakarta.persistence.jdbc.user" value="postgres" /> <!--
+			ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
+			<property name="jakarta.persistence.jdbc.password" value="123" /> <!--
+			ALTERE DE ACORDO COM A SUA CONFIGURACAO -->
 			<!-- Configurações específicas do Hibernate -->
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.PostgreSQLDialect" />
@@ -39,7 +47,7 @@
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.connection.pool_size" value="10" />
-			
+
 		</properties>
 	</persistence-unit>
 </persistence>
