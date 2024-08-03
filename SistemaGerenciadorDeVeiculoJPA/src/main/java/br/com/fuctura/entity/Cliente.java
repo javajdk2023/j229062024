@@ -1,25 +1,32 @@
 package br.com.fuctura.entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_usuario")
-public class Usuario {
-	@GeneratedValue(strategy = GenerationType.AUTO)
+@Table(name = "tb_cliente")
+public class Cliente {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer codigo;
 	private String nome;
-	@Column(length = 14)
-	private String cpf;
-	private Integer idade;
 
+	@OneToOne
+	private Endereco endereco;
+	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	//getter&setter
 	public Integer getCodigo() {
 		return codigo;
 	}
@@ -35,21 +42,6 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public Integer getIdade() {
-		return idade;
-	}
-
-	public void setIdade(Integer idade) {
-		this.idade = idade;
-	}
-
+	
+	
 }
